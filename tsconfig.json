@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2019",
+    "declaration": true,
+    "lib": [
+      "ES2019"
+    ],
+    // "outDir": "out",
+    // "rootDir": "src",
+    "sourceMap": true,
+    "composite": true,
+    // "typeRoots": [
+    //   "jest"
+    // ]
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "**/__tests__/*"
+  ],
+  "references": [
+    {
+      "path": "packages/client"
+    },
+    {
+      "path": "packages/server"
+    },
+  ]
+}

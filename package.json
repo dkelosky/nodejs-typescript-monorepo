@@ -1,0 +1,23 @@
+{
+  "name": "server-side-events",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "npm run build && npm test --workspaces",
+    "lint": "eslint . --ext ts",
+    "prettier": "prettier packages/*/src/**/*.ts --write",
+    "compile": "tsc -b",
+    "watch": "tsc -watch -p ./",
+    "license": "sh license.sh",
+    "build": "npm run license && npm run prettier && npm run compile && npm run lint",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
