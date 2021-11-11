@@ -5,7 +5,8 @@
   "private": true,
   "main": "lib/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "echo": "echo hello client"
   },
   "keywords": [],
   "author": "",

@@ -6,8 +6,6 @@
 
 import { ClientRequest, request } from "http";
 
-// console.log(`hello client`);
-
 const options = {
   port: 3000,
   host: "localhost",
@@ -18,13 +16,9 @@ const options = {
 
 const req: ClientRequest = request(options, (answer) => {
   answer.on("data", (chunk: Buffer) => {
-    console.log("Got data: ");
+    console.log("Got response: ");
     console.log(`   ${chunk.toString()}`);
 
-    // TNOTE(Kelosky): we can end when we see something interesting
-    // if (chunk.toString().trim() === "data: 5") {
-    //     answer.socket.end();
-    // }
   });
 
   answer.on("end", () => {
@@ -39,10 +33,6 @@ const req: ClientRequest = request(options, (answer) => {
     console.log("answer close");
   });
 });
-
-// res.end(() => {
-//     console.log(`end`);
-// });
 
 req.on("connect", () => {
   console.log(`connect`);

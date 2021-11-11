@@ -24,7 +24,6 @@ app.get("/countdown", function (req, res) {
 function countdown(res: express.Response, count: number) {
   res.write(`data: ${count}`);
   console.log(`count is ${count}`);
-  console.log(res);
   if (count) setTimeout(() => countdown(res, count - 1), 1000 * 1);
   else {
     res.end();

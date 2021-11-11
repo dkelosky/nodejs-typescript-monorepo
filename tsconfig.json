@@ -6,13 +6,8 @@
     "lib": [
       "ES2019"
     ],
-    // "outDir": "out",
-    // "rootDir": "src",
     "sourceMap": true,
     "composite": true,
-    // "typeRoots": [
-    //   "jest"
-    // ]
   },
   "include": [
     "src"

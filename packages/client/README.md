@@ -1,24 +1,5 @@
-# API
+# Client
 
-```typescript
-import { ISession, Session } from "@zowe/imperative";
-import { Greeting } from "./Greeting";
+Client package for connecting to a Server Side Events server.
 
-(async () => {
-  const config: ISession = {
-    hostname: "localhost",
-    port: 10080,
-    user: "zowe",
-    password: "zowe",
-    protocol: "https",
-    type: "basic",
-    rejectUnauthorized: false,
-  };
-
-  const session: Session = new Session(config);
-
-  const resp = await Greeting.greet(session, "World");
-  console.log(resp);
-})();
-
-```
+This package name is `@sse/client`.
