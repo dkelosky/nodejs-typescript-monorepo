@@ -1,4 +1,4 @@
-name: Zowe CLI CI
+name: Node.js CI
 
 on: [push, pull_request]
 
